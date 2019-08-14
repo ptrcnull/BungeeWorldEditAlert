@@ -33,8 +33,8 @@ public final class BungeeWorldEditAlert extends Plugin implements Listener {
         ProxiedPlayer sender = (ProxiedPlayer) event.getSender();
         Server server = (Server) event.getReceiver();
 
-        if (event.isCommand() && event.getMessage().startsWith("//")) {
-            BaseComponent[] message = new ComponentBuilder("Warning!").color(ChatColor.RED)
+        if (event.isCommand() && event.getMessage().startsWith("//") && sender.hasPermission("worldedit.help")) {
+            BaseComponent[] message = new ComponentBuilder("Warning! ").color(ChatColor.RED)
                 .append(sender.getDisplayName()).color(ChatColor.YELLOW)
                 .append(" used WorldEdit on a server ").color(ChatColor.RED)
                 .append(server.getInfo().getName()).color(ChatColor.AQUA)
