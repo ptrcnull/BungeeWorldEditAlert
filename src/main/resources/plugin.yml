@@ -1,0 +1,4 @@
+name: BungeeWorldEditAlert
+version: ${project.version}
+main: ml.bjorn.bungeeworldeditalert.BungeeWorldEditAlert
+description: Alert admins when someone is using WorldEdit on the network
